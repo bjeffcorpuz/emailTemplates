@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+    xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light">
+    <meta name="supported-color-schemes" content="light">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Testing Templates</title>
+    <style>
+        .body {
+            margin: 0 auto !important;
+            min-width: 100% !important;
+            padding: 0 !important;
+            width: 100% !important;
+        }
+
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            box-sizing: border-box;
+        }
+
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+        }
+
+        sup {
+            font-size: 60%;
+            line-height: 0;
+        }
+
+        span.outlook-overflow-scaling {
+            width: 100% !important;
+            max-width: 100%;
+            padding: 0 !important;
+        }
+
+        a,
+        a:link,
+        a:visited {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        table,
+        td {
+            font-family: 'Calibri', Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            margin: 0 auto;
+        }
+
+        th {
+            font-weight: normal
+        }
+
+        #backgroundWrapper,
+        .body {
+            background-color: #ffffff;
+        }
+
+        .stack-wrapper {
+            font-size: 0;
+            text-align: center;
+        }
+
+        .stack-wrapper .column {
+            display: inline-block;
+            vertical-align: top;
+            white-space: normal;
+            width: 100%;
+        }
+
+        .dshow {
+            display: block !important;
+        }
+
+        .mshow {
+            display: none !important;
+        }
+
+        .twoColumn .column {
+            margin: 0;
+            max-width: 300px;
+        }
+
+        .twoColumn .dropDesk {
+            display: block;
+            max-width: 300px;
+            width: 100% !important;
+            padding: 0px 0px 6px 5px !important;
+        }
+
+        #prodDesc{
+            display: inline-block;
+            max-width: 300px !important;
+
+        }
+
+
+
+
+        @media only screen and (max-width: 599px) {
+            u~.body #backgroundWrapper {
+                width: 100vw !important;
+            }
+
+            .dshow {
+                display: none !important;
+            }
+
+            .mshow {
+                display: block !important;
+            }
+
+            .mobile-hide {
+                display: none !important;
+            }
+
+            .photo img,
+            .img {
+                height: auto !important;
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+
+            .stack-wrapper {
+                white-space: normal !important;
+            }
+
+            .drop {
+                clear: both;
+                display: block !important;
+                width: 100% !important;
+            }
+
+            .twoColumn .column {
+                margin: 0;
+                max-width: 100% !important;
+            }
+
+            .twoColumn .dropDesk {
+                display: inline-block !important;
+                max-width: 100%;
+                width: 50% !important;
+            }
+
+            .twoColumn #dropDeskLeft {
+                padding: 10px 5px 10px 0 !important;
+            }
+
+            .twoColumn #dropDeskRight {
+                padding: 10px 0 10px 5px !important
+            }
+
+            #prodDesc, #prodDesc > div{
+                display: block !important;
+                max-width: 400px !important;
+            }            
+        }
+    </style>
+
+    <!--[if true]>
+    <style>
+        table { border-collapse: collapse; }
+        table, td { mso-line-height-rule: exactly; mso-margin-bottom-alt: 0; mso-margin-top-alt: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        table, td, h1, h2, h3, h4, h5, h6 { font-family: Arial, sans-serif !important; }
+        sup { font-size: 110%; mso-text-raise: 12%; }
+        .column { margin: 0 !important; }
+    </style>
+    <![endif]-->
+
+    <!--[if gte mso 16]>
+    <style type="text/css">
+        a.keepWhite, .keepWhite{
+            mso-style-textfill-type: gradient;
+            mso-style-textfill-fill-gradientfill-stoplist: "0 \#F7FAFD 4 100000 lumm=5000 lumo=95000\,100000 \#FFFFFF 0 100000\,100000 \#B5D2EC 4 100000 lumm=45000 lumo=55000\,100000 \#CEE1F2 4 100000 lumm=30000 lumo=70000";
+            color: #000000 !important;
+        }
+    </style>
+    <![endif]-->
+
+    <!--[if false]><!-->
+    <style>
+        a[x-apple-data-detectors],
+        #MessageViewBody .samsungfix a {
+            color: inherit !important;
+            font-family: inherit !important;
+            font-size: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+            text-decoration: none !important;
+        }
+
+        #MessageViewBody,
+        #MessageWebViewDiv {
+            margin: 0 !important;
+            min-width: 100vw;
+            padding: 0 !important;
+            zoom: 1 !important;
+        }
+
+        #MessageViewBody #backgroundWrapper {
+            min-width: 100vw;
+        }
+
+        @media yahoo {
+            #backgroundWrapper {
+                table-layout: fixed;
+            }
+
+        }
+    </style>
+    <!--<![endif]-->
+
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
+</head>
+
+<body class="body"
+    style="font-family: 'Calibri', Arial, sans-serif; margin: 0; padding: 0; background: #ffffff; color: #000000">
+
+    <table id="backgroundWrapper" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+        <tr>
+            <td align="center">
+
+                <div style="display: none; line-height: 0; max-height: 0px; overflow: hidden;">
+                    &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+                </div>
+
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                    <tr>
+                        <td align="center" style="background-color: #ffffff; width: 600px;">
+
+                            <!-- Logo -->
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" bgcolor="#47624F">
+                                <tr>
+                                    <td class="stack-wrapper" align="center" style="padding: 5px 0 10px 0; text-align: center;">
+                                        <img src="https://i.ibb.co/N9Yg269/f59f0243b5a6459bade431dff49003a5-removebg-preview.png"
+                                            alt="Image Alt" width="120"
+                                            style="border: 0; height: auto; margin: 0px; max-width: 120px; width: 100%; ">
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Navs Desktop -->
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                <tr>
+                                    <td class="dshow" align="center"
+                                        style="padding: 15px 0 0px 0; font-size: 16px; font-weight: bold; display: none; color: #47624F;"
+                                        valign="bottom">
+                                        <a href="https://www.google.com" target="_blank" alias=""
+                                            style="text-decoration: none;  color: #47624F;">HOMEPAGE</a> | <a
+                                            href="https://www.google.com" target="_blank" alias=""
+                                            style="text-decoration: none;  color: #47624F;">PRODUCTS</a> | <a
+                                            href="https://www.google.com" target="_blank" alias=""
+                                            style="text-decoration: none;  color: #47624F;">STORE</a> | <a
+                                            href="https://www.google.com" target="_blank" alias=""
+                                            style="text-decoration: none;  color: #47624F;">CAREERS</a> | <a
+                                            href="https://www.google.com" target="_blank" alias=""
+                                            style="text-decoration: none;  color: #47624F;">CONTACT US</a>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Block 1 -->
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                <tr>
+                                    <td align="center" style="padding: 15px 0 15px 0; ">
+                                        <img src="https://i.ibb.co/1QFkJPW/hero-IMAge.png" alt="Image Alt" width="600"
+                                            style="border: 0; display: block; height: auto; margin: 0px; max-width: 600px; width: 100%; ">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center"
+                                        style="padding: 0 20px 15px 20px; font-size: 26px; font-weight: bold;">
+                                        Header Here
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="padding: 0 20px 20px 20px; font-size: 16px">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem nisl,
+                                        fermentum eu tellus non, suscipit hendrerit velit. Vestibulum quis luctus massa.
+                                        Aenean iaculis a nisl a iaculis. Sed est augue, efficitur sed euismod et,
+                                        venenatis ac metus. Ut consequat id quam non auctor. Pellentesque lorem dui,
+                                        facilisis ac elementum id, tempus vel ante. Praesent a eros ante. Nulla pharetra
+                                        ipsum pharetra egestas semper. Morbi ante lorem, auctor eget dictum vitae,
+                                        vulputate consectetur justo. Proin lobortis pretium hendrerit.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="padding: 0 20px 30px 20px; ">
+                                        <!--[if mso]>
+                                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.google.com" style="height: 50px; v-text-anchor: middle; width:165px; text-decoration: none;" arcsize="30px" stroke="f" fillcolor="#47624F">
+                                            <w:anchorlock/>
+                                            <center>
+                                        <![endif]-->
+
+                                        <!--[if false]-->
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                            <tr>
+                                                <td align="center"
+                                                    style="background-color: #47624F; border-radius: 30px;">
+                                                    <!--[endif]-->
+
+                                                    <a target="_blank" class="keepWhite" href="https://www.google.com"
+                                                        style="background-color:rgba(71, 98, 79, 1); border-radius: 30px; width: 165px; color:#ffffff; line-height: 50px; display: inline-block; font-size: 16px; font-weight: bold; text-align: center; text-decoration: none; -webkit-text-size-adjust: none;"><span
+                                                            class="keepWhite">Shop Now</span></a>
+
+                                                    <!--[if false]-->
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!--[endif]-->
+
+                                        <!--[if mso]>
+                                            </center>
+                                            </v:roundrect>
+                                        <![endif]-->
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Block 2 -->
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                <tr>
+                                    <td class="stack-wrapper" align="center" style="padding: 0 0 20px 0; ">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                            <tr>
+                                                <td class="stack-wrapper" align="center" style="padding: 0; width: 30%; " width="30%" valign="middle">
+                                                    <hr width="100%" style="border: 2px solid #47624F" bgcolor="#47624F">
+                                                </td>
+                                                <td class="stack-wrapper" align="center" style="padding: 0; width: 40%; font-size: 24px; font-weight: bold; color: #47624F" width="40%" valign="middle">
+                                                    NEW ARRIVALS
+                                                </td>
+                                                <td class="stack-wrapper" align="center" style="padding: 0; width: 30%; " width="30%" valign="middle">
+                                                    <hr width="100%" style="border: 2px solid #47624F" bgcolor="#47624F">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                             </table>
+
+                            <table class="twoColumn" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                width="100%">
+                                <tr>
+                                    <td class="stack-wrapper" align="center" style="padding: 0; ">
+                                        <!--[if true]>
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                <tr><td align="center" valign="top" style="width: 300px;">
+                                        <![endif]-->
+                                        <div class="column" style="padding: 0">
+                                            <!-- add style attribute if you are using it on 4 or more columns <div class="column" style="max-width: 300px; width: 100%;"> -->
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                                width="100%" style="padding:0">
+                                                <tr>
+                                                    <td align="center" style="padding: 0; ">
+                                                        <!--[if false]><!-->
+                                                        <div class="mshow" style="mso-hide: all;">
+                                                            <img alt="Image Alt" border="0"
+                                                                src="https://i.ibb.co/cwS1NDV/mobile.jpg"
+                                                                style="mso-hide:all; max-width: 100%; height: auto; "
+                                                                width="100%">
+                                                        </div>
+                                                        <!--<![endif]-->
+                                                        <img class="dshow" src="https://i.ibb.co/8Pw8Ryc/600x800.jpg"
+                                                            alt="Image Alt" width="300"
+                                                            style="border: 0; display: none; height: auto; margin: 0px; max-width: 300px; width: 100%; ">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if true]>
+                                                </td>
+                                                <td align="center" valign="top" style="width: 300px;">
+                                        <![endif]-->
+                                        <div class="column" style="padding: 0">
+                                            <!-- add style attribute if you are using it on 4 or more columns <div class="column" style="max-width: 300px; width: 100%;"> -->
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                                width="100%" style="padding:0">
+                                                <tr>
+                                                    <td align="center" style="padding: 0; ">
+                                                        <table border="0" cellpadding="0" cellspacing="0"
+                                                            role="presentation" width="100%">
+                                                            <tr>
+                                                                <th class="dropDesk" id="dropDeskLeft" align="center"
+                                                                    style="padding: 10px 5px 10px 0; width: 50%; "
+                                                                    width="50%">
+                                                                    <img class="outlookImgL"
+                                                                        src="https://i.ibb.co/bvWL9Ys/600x400.jpg"
+                                                                        alt="Image Alt" width="295"
+                                                                        style="border: 0; display: block; height: auto; margin: 0px; max-width: 295px; width: 100%; ">
+                                                                </th>
+
+                                                                <!--[if true]>
+                                                            </tr>
+                                                            <tr>
+                                                            <![endif]-->
+
+                                                                <th class="dropDesk" id="dropDeskRight" align="center"
+                                                                    style="padding: 10px 0 10px 5px; width: 50%; "
+                                                                    width="50%">
+                                                                    <img class="outlookImgL"
+                                                                        src="https://i.ibb.co/bvWL9Ys/600x400.jpg"
+                                                                        alt="Image Alt" width="295"
+                                                                        style="border: 0; display: block; height: auto; margin: 0px; max-width: 295px; width: 100%; ">
+                                                                </th>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if true]>
+                                                </td></tr>
+                                            </table>
+                                        <![endif]-->
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Block 3 -->
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                <tr>
+                                    <td class="stack-wrapper" align="center" style="padding: 20px 0 10px 0; ">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"  bgcolor="#47624F">
+                                            <tr>
+                                                <td class="stack-wrapper" align="center" style="padding: 10px 0; width: 30%; " width="30%" valign="middle">
+                                                    <hr width="100%" style="border: 2px solid #ffffff">
+                                                </td>
+                                                <td class="stack-wrapper" align="center" style="padding: 10px 0; width: 40%; font-size: 24px; font-weight: bold; color: #ffffff" width="40%" valign="middle">
+                                                    SALE NOW
+                                                </td>
+                                                <td class="stack-wrapper" align="center" style="padding: 10px 0; width: 30%; " width="30%" valign="middle">
+                                                    <hr width="100%" style="border: 2px solid #ffffff">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                             </table>
+
+                            <table class="twoColumn" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                <tr>
+                                    <td class="stack-wrapper" align="center" style="padding: 0; ">
+                                        <!--[if true]>
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                <tr><td align="center" valign="top" style="width: 300px;">
+                                        <![endif]-->
+                                        <div class="column">
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="padding:0">
+                                                <tr>
+                                                    <td align="center" style="padding: 0; ">
+                                                        <img src="https://i.ibb.co/ccWwFcC/400x400.png" alt="Image Alt" width="300" style="border: 0; display: block; height: auto; margin: 0px; max-width: 100%; width: 100%; ">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if true]>
+                                                </td>
+                                                <td align="center" valign="middle" style="width: 300px;;">
+                                        <![endif]-->
+                                        <div class="column" id="prodDesc" valign="middle" style="max-width: 400px; height: 300px; margin: 0 auto" height="300">
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                <tr>
+                                                    <td class="stack-wrapper" align="center" style="padding: 0; height: 300px;" height="300">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="padding:0">
+                                                            <tr>
+                                                                <td align="center" style="padding: 20px 5px 0px 5px; font-size: 18px; color: #47624F; font-weight: bold; text-align: center;">
+                                                                    PRODUCT NAME
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="padding: 10px 20px; font-size: 14px; text-align: center;">
+                                                                    <p style="margin: 0 0 15px 0; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac enim velit. Nunc pharetra varius accumsan. Morbi euismod, leo sed aliquam convallis, dolor metus aliquet diams</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="padding: 0 0 20px 0; ">
+                                                                    <!--[if mso]>
+                                                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.google.com" style="height: 50px; v-text-anchor: middle; width:165px; text-decoration: none;" arcsize="30px" stroke="f" fillcolor="#47624F">
+                                                                        <w:anchorlock/>
+                                                                        <center>
+                                                                    <![endif]-->
+                                                                    
+                                                                    <!--[if false]-->
+                                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                                            <tr><td align="center" style="background-color: #47624F; border-radius: 30px;">
+                                                                    <!--[endif]-->
+                                                                    
+                                                                            <a target="_blank" class="keepWhite" href="https://www.google.com" style="background-color: rgba(71, 98, 79, 1); border-radius: 30px; width: 165px; color:#ffffff; line-height: 50px; display: inline-block; font-size: 16px; font-weight: bold; text-align: center; text-decoration: none; -webkit-text-size-adjust: none;">CTA BUTTON</a>
+                                                                    
+                                                                    <!--[if false]-->
+                                                                            </td></tr>
+                                                                        </table>
+                                                                    <!--[endif]-->
+                                                                    
+                                                                    <!--[if mso]>
+                                                                        </center>
+                                                                        </v:roundrect>
+                                                                    <![endif]-->
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        </table>   
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if true]>
+                                                </td></tr>
+                                            </table>
+                                        <![endif]-->
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <table class="twoColumn" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                <tr>
+                                    <td class="stack-wrapper" align="center" style="padding: 0; " dir="rtl">
+                                        <!--[if true]>
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                <tr><td align="center" valign="top" style="width: 300px;">
+                                        <![endif]-->
+                                        <div class="column">
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="padding:0">
+                                                <tr>
+                                                    <td align="center" style="padding: 0; ">
+                                                        <img src="https://i.ibb.co/ccWwFcC/400x400.png" alt="Image Alt" width="300" style="border: 0; display: block; height: auto; margin: 0px; max-width: 100%; width: 100%; ">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if true]>
+                                                </td>
+                                                <td align="center" valign="middle" style="width: 300px;;">
+                                        <![endif]-->
+                                        <div class="column" id="prodDesc" valign="middle" style="max-width: 400px; height: 300px; margin: 0 auto" height="300">
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                <tr>
+                                                    <td class="stack-wrapper" align="center" style="padding: 0; height: 300px;" height="300">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="padding:0">
+                                                            <tr>
+                                                                <td align="center" style="padding: 20px 5px 0px 5px; font-size: 18px; color: #47624F; font-weight: bold; text-align: center;">
+                                                                    PRODUCT NAME
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="padding: 10px 20px; font-size: 14px; text-align: center;">
+                                                                    <p style="margin: 0 0 15px 0; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac enim velit. Nunc pharetra varius accumsan. Morbi euismod, leo sed aliquam convallis, dolor metus aliquet diams</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="padding: 0 0 20px 0; ">
+                                                                    <!--[if mso]>
+                                                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.google.com" style="height: 50px; v-text-anchor: middle; width:165px; text-decoration: none;" arcsize="30px" stroke="f" fillcolor="#47624F">
+                                                                        <w:anchorlock/>
+                                                                        <center>
+                                                                    <![endif]-->
+                                                                    
+                                                                    <!--[if false]-->
+                                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                                            <tr><td align="center" style="background-color: #47624F; border-radius: 30px;">
+                                                                    <!--[endif]-->
+                                                                    
+                                                                            <a target="_blank" class="keepWhite" href="https://www.google.com" style="background-color: rgba(71, 98, 79, 1); border-radius: 30px; width: 165px; color:#ffffff; line-height: 50px; display: inline-block; font-size: 16px; font-weight: bold; text-align: center; text-decoration: none; -webkit-text-size-adjust: none;">CTA BUTTON</a>
+                                                                    
+                                                                    <!--[if false]-->
+                                                                            </td></tr>
+                                                                        </table>
+                                                                    <!--[endif]-->
+                                                                    
+                                                                    <!--[if mso]>
+                                                                        </center>
+                                                                        </v:roundrect>
+                                                                    <![endif]-->
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        </table>   
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if true]>
+                                                </td></tr>
+                                            </table>
+                                        <![endif]-->
+                                    </td>
+                                </tr>
+                            </table>
+                             
+                            <table class="twoColumn" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                <tr>
+                                    <td class="stack-wrapper" align="center" style="padding: 0; ">
+                                        <!--[if true]>
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                <tr><td align="center" valign="top" style="width: 300px;">
+                                        <![endif]-->
+                                        <div class="column">
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="padding:0">
+                                                <tr>
+                                                    <td align="center" style="padding: 0; ">
+                                                        <img src="https://i.ibb.co/ccWwFcC/400x400.png" alt="Image Alt" width="300" style="border: 0; display: block; height: auto; margin: 0px; max-width: 100%; width: 100%; ">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if true]>
+                                                </td>
+                                                <td align="center" valign="middle" style="width: 300px;;">
+                                        <![endif]-->
+                                        <div class="column" id="prodDesc" valign="middle" style="max-width: 400px; height: 300px; margin: 0 auto" height="300">
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                <tr>
+                                                    <td class="stack-wrapper" align="center" style="padding: 0; height: 300px;" height="300">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="padding:0">
+                                                            <tr>
+                                                                <td align="center" style="padding: 20px 5px 0px 5px; font-size: 18px; color: #47624F; font-weight: bold; text-align: center;">
+                                                                    PRODUCT NAME
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="padding: 10px 20px; font-size: 14px; text-align: center;">
+                                                                    <p style="margin: 0 0 15px 0; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac enim velit. Nunc pharetra varius accumsan. Morbi euismod, leo sed aliquam convallis, dolor metus aliquet diams</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="padding: 0 0 20px 0; ">
+                                                                    <!--[if mso]>
+                                                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.google.com" style="height: 50px; v-text-anchor: middle; width:165px; text-decoration: none;" arcsize="30px" stroke="f" fillcolor="#47624F">
+                                                                        <w:anchorlock/>
+                                                                        <center>
+                                                                    <![endif]-->
+                                                                    
+                                                                    <!--[if false]-->
+                                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                                            <tr><td align="center" style="background-color: #47624F; border-radius: 30px;">
+                                                                    <!--[endif]-->
+                                                                    
+                                                                            <a target="_blank" class="keepWhite" href="https://www.google.com" style="background-color: rgba(71, 98, 79, 1); border-radius: 30px; width: 165px; color:#ffffff; line-height: 50px; display: inline-block; font-size: 16px; font-weight: bold; text-align: center; text-decoration: none; -webkit-text-size-adjust: none;">CTA BUTTON</a>
+                                                                    
+                                                                    <!--[if false]-->
+                                                                            </td></tr>
+                                                                        </table>
+                                                                    <!--[endif]-->
+                                                                    
+                                                                    <!--[if mso]>
+                                                                        </center>
+                                                                        </v:roundrect>
+                                                                    <![endif]-->
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        </table>   
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if true]>
+                                                </td></tr>
+                                            </table>
+                                        <![endif]-->
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                <tr>
+                                    <td lign="center" style="padding: 5px 0; display: none;" class="dshow">
+                                        <!-- spacer -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" style="padding: 20px 15px; font-size: 12px; color: #ffffff; text-align: left; " bgcolor="#47624F">
+                                        <strong>Terms and Conditions:</strong>
+                                        <br><br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem nisl, fermentum eu tellus non, suscipit hendrerit velit. Vestibulum quis luctus massa. Aenean iaculis a nisl a iaculis. Sed est augue, efficitur sed euismod et, venenatis ac metus. Ut consequat id quam non auctor.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td lign="center" style="padding: 5px 0;">
+                                        <!-- spacer -->
+                                    </td>
+                                </tr>
+                            </table>
+
+
+
+                            <!-- Navs Mobile Footer -->
+                            <!--[if false]-->
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                <tr>
+                                    <td class="mshow" align="center"
+                                        style="padding: 0; display: block; font-size: 16px">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                            width="100%" bgcolor="#47624F">
+                                            <tr>
+                                                <th align="center"
+                                                    style="padding: 20px 0 10px 0; font-weight: bold; text-align: center;">
+
+                                                    <span style="border-bottom: 2px solid #ffffff; padding-bottom: 1px;"><a href="https://www.google.com" class="keepWhite" target="_blank"
+                                                        alias=""
+                                                        style="text-decoration: none;  color: #ffffff; ">HOMEPAGE</a></span>
+                                                    <!-- <hr style="width: 40%; border: 1px solid #ffffff"> -->
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th align="center"
+                                                    style="padding: 10px 0; font-weight: bold; text-align: center;">
+                                                    <span style="border-bottom: 2px solid #ffffff; padding-bottom: 1px;"><a href="https://www.google.com" class="keepWhite" target="_blank"
+                                                        alias=""
+                                                        style="text-decoration: none;  color: #ffffff; ">PRODUCTS</a>
+                                                    </span>
+
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th align="center"
+                                                    style="padding: 10px 0; font-weight: bold; text-align: center;">
+                                                    <span style="border-bottom: 2px solid #ffffff; padding-bottom: 1px;"><a href="https://www.google.com" class="keepWhite" target="_blank"
+                                                        alias=""
+                                                        style="text-decoration: none;  color: #ffffff; ">STORES</a>
+                                                    </span>
+                                                    <!-- <hr style="width: 50%; border: 1px solid #447604"> -->
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th align="center"
+                                                    style="padding: 10px 0; font-weight: bold; text-align: center;">
+                                                    <span style="border-bottom: 2px solid #ffffff; padding-bottom: 1px;"><a href="https://www.google.com" class="keepWhite" target="_blank"
+                                                        alias=""
+                                                        style="text-decoration: none;  color: #ffffff; ">CAREERS</a>
+                                                    </span>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th align="center"
+                                                    style="padding: 10px 0 20px 0; font-weight: bold; text-align: center;">
+                                                    <span style="border-bottom: 2px solid #ffffff; padding-bottom: 1px;"><a href="https://www.google.com" class="keepWhite" target="_blank"
+                                                        alias=""
+                                                        style="text-decoration: none;  color: #ffffff; ">CONTACT US</a>
+                                                    </span>    
+                                                </th>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="padding: 5px 0; ">
+                                        
+                                    </td>
+                                </tr>
+                            </table>
+                            <!--[endif]-->
+
+
+
+                            <!-- Footer 1  -->
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" bgcolor="#ffffff">
+                                <tr>
+                                    <td align="center" background="https://i.ibb.co/bLSVJ1H/bgcolor.jpg" height="250"
+                                        valign="middle"
+                                        style="background: url('https://i.ibb.co/bLSVJ1H/bgcolor.jpg') top left / cover no-repeat; background-size: cover; height: 250px; width: 600px;">
+
+                                        <!--[if true]>
+                                        <v:image xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="border: 0; display: inline-block; height: 250px; width: 600px;" src="https://i.ibb.co/bLSVJ1H/bgcolor.jpg" />
+                                        <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="border: 0; display: inline-block; height: 250px; position: absolute; width: 600px;">
+                                        <v:fill opacity="0%" color="#47624F" />
+                                        <v:textbox inset="0,0,0,0">
+                                    <![endif]-->
+
+                                        <div>
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                <tr>
+                                                    <td class="stack-wrapper" align="center" style="padding: 20px 0;">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="93%" align="center">
+                                                            <tr>
+                                                                <td align="center" style="padding: 0;">
+                                                                    <span
+                                                                        style="display: block; color: #ffffff; font-size: 14px; font-weight: bold;"
+                                                                        class="keepWhite">OUR SOCIAL MEDIA</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="padding: 20px 0; text-align: center;">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin: 0 auto;">
+                                                                        <tr>
+                                                                            <td class="stack-wrapper" align="center"
+                                                                                style="padding: 0 10px;">
+                                                                                <a href="#" target="_blank" alias=""
+                                                                                    style="text-decoration: none;  "><img
+                                                                                        src="https://i.ibb.co/bKXj0MP/facebook.png"
+                                                                                        alt="Image Alt" width="40"
+                                                                                        style="border: 0; height: auto; margin: 0px; max-width: 40px; width: 100%; "></a>
+                                                                            </td>
+                                                                            <td class="stack-wrapper" align="center"
+                                                                                style="padding: 0 10px;">
+                                                                                <a href="#" target="_blank" alias=""
+                                                                                    style="text-decoration: none;  "><img
+                                                                                        src="https://i.ibb.co/Q8gczyX/twitch.png"
+                                                                                        alt="Image Alt" width="40"
+                                                                                        style="border: 0; height: auto; margin: 0px; max-width: 40px; width: 100%; "></a>
+                                                                            </td>
+                                                                            <td class="stack-wrapper" align="center"
+                                                                                style="padding: 0 10px;">
+                                                                                <a href="#" target="_blank" alias=""
+                                                                                    style="text-decoration: none;  "><img
+                                                                                        src="https://i.ibb.co/Nsbbhjn/social.png"
+                                                                                        alt="Image Alt" width="40"
+                                                                                        style="border: 0; height: auto; margin: 0px; max-width: 40px; width: 100%; "></a>
+                                                                            </td>
+                                                                            <td class="stack-wrapper" align="center"
+                                                                                style="padding: 0 10px;">
+                                                                                <a href="#" target="_blank" alias=""
+                                                                                    style="text-decoration: none;  "><img
+                                                                                        src="https://i.ibb.co/XL9ywZq/twitter.png"
+                                                                                        alt="Image Alt" width="40"
+                                                                                        style="border: 0; height: auto; margin: 0px; max-width: 40px; width: 100%; "></a>
+                                                                            </td>
+                                                                            <td class="stack-wrapper" align="center"
+                                                                                style="padding: 0 10px;">
+                                                                                <a href="#" target="_blank" alias=""
+                                                                                    style="text-decoration: none;  "><img
+                                                                                        src="https://i.ibb.co/kgH5j19/vimeo.png"
+                                                                                        alt="Image Alt" width="40"
+                                                                                        style="border: 0; height: auto; margin: 0px; max-width: 40px; width: 100%; "></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"
+                                                                    style="padding: 0 0 20px 0; font-size: 12px">
+                                                                    <p style="margin: 0 0 5px 0; color: #ffffff; font-weight: bold;"
+                                                                        class="keepWhite">Questions?</p>
+                                                                    <p style="margin: 0; color: #ffffff; mso-line-height-rule: exactly; line-height: 12px;"
+                                                                        class="keepWhite">
+                                                                        <a href="#" target="_blank" alias=""
+                                                                            style="text-decoration: none; color: #ffffff; margin-bottom: 1px;"
+                                                                            class="keepWhite">Chat with us</a> | <a
+                                                                            href="#" target="_blank" alias=""
+                                                                            style="text-decoration: none; color: #ffffff"
+                                                                            class="keepWhite">Meet with us</a>
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"
+                                                                    style="padding: 0 0 20px 0; font-size: 10px">
+                                                                    <p style="margin: 0; color: #ffffff"
+                                                                        class="keepWhite">Lorem ipsum dolor sit amet,
+                                                                        consectetur adipiscing elit. Donec lorem nisl,
+                                                                        fermentum eu tellus non, suscipit hendrerit
+                                                                        velit. Vestibulum quis luctus massa. Aenean
+                                                                        iaculis a nisl a iaculis.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"
+                                                                    style="padding: 0 0 0px 0; font-size: 12px">
+                                                                    <p style="margin: 0; color: #ffffff"
+                                                                        class="keepWhite">
+                                                                        <a href="#" target="_blank" alias=""
+                                                                            style="text-decoration: none; color: #ffffff"
+                                                                            class="keepWhite">Privacy Policy</a> | <a
+                                                                            href="#" target="_blank" alias=""
+                                                                            style="text-decoration: none; color: #ffffff"
+                                                                            class="keepWhite">Unsubscribe</a> | <a
+                                                                            href="#" target="_blank" alias=""
+                                                                            style="text-decoration: none; color: #ffffff"
+                                                                            class="keepWhite">View email online</a>
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+
+                                        <!--[if true]>
+                                        </v:textbox>
+                                        </v:fill>
+                                        </v:rect>
+                                        </v:image>
+                                    <![endif]-->
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
