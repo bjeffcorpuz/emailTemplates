@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Simple Email Template</title>
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+        .body { margin: 0 auto !important; min-width: 100% !important; padding: 0 !important; width: 100% !important;}
+        * { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; box-sizing: border-box; }
+        img { border: 0; height: auto; line-height: 100%; }
+        sup { font-size: 60%; line-height: 0; }
+        span.outlook-overflow-scaling { width: 100% !important; max-width: 100%; padding: 0 !important; }
+        a, a:link { color: inherit; text-decoration: none; }
+        h1, h2, h3, h4, h5, h6, table, td { font-family: 'Poppins', Arial, sans-serif; margin: 0 0; }
+        p { margin: 0 0; }
+        th{ font-weight: normal }
+        #backgroundWrapper, .body { background-color: #ffffff; }
+        .stack-wrapper { font-size: 0; text-align: center; }
+        .stack-wrapper .column { display: inline-block; vertical-align: top; white-space: normal; width: 100%; }
+        .dshow { display: block !important; }
+        .mshow { display: none !important; }
+        .twoColumn .column { margin: 0; max-width: 300px;}
+        .twoColumn .desktopStck { padding: 0 0 7px 5px !important; display: block; max-width: 300px !important; width: 100% !important;}
+        .threeColumn .column {margin: 0; max-width: 200px;}
+        .threeColumn .undropImg, .threeColumn .undropDesc { display: block; width: 100% !important; padding: 0 5px !important; }
+        .threeColumn .undropDesc { margin: 10px 0;}
+
+
+        /* border-bottom fix on android gmail darkmode */
+        @media (prefers-color-scheme: dark) {
+            .bg {background:url("https://image.e.countryroad.com.au/lib/fe9312727260027f74/m/61/whiteBG.jpg") !important;}
+            /* [data-ogsb] .keepWhite { background: #153131 !important;} */
+        }
+        u ~ .body .bg{ background:url("https://image.e.countryroad.com.au/lib/fe9312727260027f74/m/61/whiteBG.jpg") !important;}
+
+        /* 3 column  fix on AOL & yahoo */
+        .& .threeColumn .undropImg, .& .threeColumn .undropDesc{
+            max-width: 100% !important;
+            width: 200px !important;
+            padding: 0px 0px !important;
+            margin: 0 0 10px 0 !important;
+            overflow: hidden !important;
+            min-height: 100px !important;
+            display: block !important;
+            
+        }
+
+
+        .& .threeColumn .undropImg img{
+            width: 190px !important;
+            margin: 0 auto !important;
+        }
+
+
+
+        @media only screen and (max-width: 599px) {
+            u ~ .body #backgroundWrapper { width: 100vw !important; }
+            .dshow { display: none !important; }
+            .mshow { display: block !important; }
+            .mobile-hide { display: none !important; }
+            .photo img, .img { height: auto !important; max-width: 100% !important; width: 100% !important; }
+            .stack-wrapper { white-space: normal !important; }
+            .drop { clear: both; display: block !important; width: 100% !important; }
+            .twoColumn .column, .threeColumn .column { margin: 0 0; max-width: 100% !important }
+            .twoColumn .desktopStck { padding: 10px 0 10px 5px !important; display: inline-block !important; max-width: 100% !important; width: 50% !important;}
+            .twoColumn #desktopStckLeft { padding: 10px 5px 10px 0px !important; }
+            .threeColumn .undropImg, .threeColumn .undropDesc { display: inline-block !important; padding: 0 !important; }
+            .threeColumn .undropDesc { margin: 0; padding: 0 10px !important; width: 70% !important}
+            .threeColumn .undropImg  {width: 30% !important }
+     
+        }
+    </style>
+
+    <!--[if true]>
+    <style>
+        table { border-collapse: collapse; }
+        table, td { mso-line-height-rule: exactly; mso-margin-bottom-alt: 0; mso-margin-top-alt: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        table, td, h1, h2, h3, h4, h5, h6, a { font-family: Arial, sans-serif !important; }
+        sup { font-size: 110%; mso-text-raise: 12%; }
+        .column { margin: 0 !important; }
+        .undropDesc {color: red !important}
+    </style>
+    <![endif]-->
+
+    <!--[if gte mso 16]>
+    <style type="text/css">
+        .keepWhite{
+            mso-style-textfill-type: gradient;
+            mso-style-textfill-fill-gradientfill-stoplist: "0 \#F7FAFD 4 100000 lumm=5000 lumo=95000\,100000 \#FFFFFF 0 100000\,100000 \#B5D2EC 4 100000 lumm=45000 lumo=55000\,100000 \#CEE1F2 4 100000 lumm=30000 lumo=70000";
+            color: #000000 !important; /*  If no !important, windows 10 darkmode OL office 365 works fine*/
+
+        }
+    </style>
+    <![endif]-->     
+
+    <!--[if false]><!-->
+    <style>
+        a[x-apple-data-detectors], #MessageViewBody .samsungfix a { color: inherit !important; font-family: inherit !important; font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; text-decoration: none !important; }
+        #MessageViewBody, #MessageWebViewDiv { margin: 0 !important; min-width: 100vw; padding: 0 !important; zoom: 1 !important; }
+        #MessageViewBody #backgroundWrapper { min-width: 100vw; }
+        @media yahoo { #backgroundWrapper { table-layout: fixed; } }
+    </style>
+    <!--<![endif]-->
+
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
+</head>
+<body class="body" style="font-family: 'Poppins', Arial, sans-serif; margin: 0; padding: 0; background: #ffffff; font-size: 12px">
+
+    <table id="backgroundWrapper" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+        <tr>
+            <td align="center">
+
+                <div style="display: none; line-height: 0; max-height: 0px; overflow: hidden;">
+                    &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+                </div>
+
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" bgcolor="#FBFFFE">
+                    <tr>
+                        <td align="center" style="background-color: #FBFFFE; width: 600px;">
+
+                            <!-- Logo -->
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                <tr>
+                                    <td align="left" style="padding: 0 0 10px 0; ">
+                                        <img src="https://i.ibb.co/9nRb8dH/output-onlinepngtools.png" alt="Logo" width="120" style="border: 0; display: block; height: auto; margin: 0px; max-width: 120px; width: 100%; ">
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Nav Desktop -->
+                            <div class="dshow" style="display: none;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                    <tr>
+                                        <td class="stack-wrapper" align="center" style="padding: 15px 0; font-size: 14px; font-weight: bold; color: #96031A; border-top: 2px solid #96031A">
+                                            <a href="https://www.google.com" target="_blank" alias="" style="text-decoration: none;  color: #96031A">HOMEPAGE</a> | <a href="https://www.google.com" target="_blank" alias="" style="text-decoration: none;  color: #96031A">PRODUCTS</a> | <a href="https://www.google.com" target="_blank" alias="" style="text-decoration: none;  color: #96031A">STORE</a> | <a href="https://www.google.com" target="_blank" alias="" style="text-decoration: none;  color: #96031A">CAREERS</a> | <a href="https://www.google.com" target="_blank" alias="" style="text-decoration: none;  color: #96031A">CONTACT US</a> 
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <!-- Block 1 -->
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"  bgcolor="#000000">
+                                <tr>
+                                    <td class="stack-wrapper" align="center" style="padding: 0; ">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" bgcolor="#FBFFFE">
+                                            <tr>
+                                                <td class="stack-wrapper" align="center" style="padding: 0 0 20px 0; ">
+                                                    <img src="https://i.ibb.co/v4bgBzp/hero-image.png" alt="Image Alt" width="600" style="border: 0; display: block; height: auto; margin: 0px; max-width: 600px; width: 100%; ">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" style="padding: 0; color: #96031A; font-size: 18px; font-weight: bold; ">
+                                                    <p style="margin: 0 0 10px; ">Header Here</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" style="padding: 0 20px 15px 20px; font-size: 16px ">
+                                                    <p style="margin: 0; color: #1B1B1E">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat risus vitae bibendum tempor. Aliquam fermentum, quam vel maximus lacinia, neque enim bibendum ante, vitae luctus mauris lorem eget tellus. Vivamus nec arcu vitae lectus commodo ultrices ac eget metus. Fusce laoreet purus ut nisi condimentum, feugiat dictum nisl dapibus. Nam commodo leo non magna ultricies, vitae dapibus turpis pellentesque.
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" style="padding: 0 0 20px 0; ">
+            
+                                                    <!--[if mso]>
+                                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.google.com" style="height: 50px; v-text-anchor: middle; width:165px; text-decoration: none;" arcsize="30px" stroke="f" fillcolor="#e3570d">
+                                                        <w:anchorlock/>
+                                                        <center>
+                                                    <![endif]-->
+                                                    
+                                                    <!--[if false]-->
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                            <tr><td class="keepWhite" align="center" style="background-color: #e3570d; border-radius: 30px;">
+                                                    <!--[endif]-->
+                                                    
+                                                            <a target="_blank" class="keepWhite" href="https://www.google.com" style="background-color:rgba(227, 87, 13, 1); border-radius: 30px; width: 165px; color:#ffffff; line-height: 50px; display: inline-block; font-size: 16px; font-weight: bold; text-align: center; text-decoration: none; -webkit-text-size-adjust: none;">CTA BUTTON</a>
+                                                    
+                                                    <!--[if false]-->
+                                                            </td></tr>
+                                                        </table>
+                                                    <!--[endif]-->
+                                                    
+                                                    <!--[if mso]>
+                                                        </center>
+                                                        </v:roundrect>
+                                                    <![endif]-->
+            
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!--Block 2 -->
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                <tr>
+                                    <td align="center" style="padding: 10px 0 20px 0; ">
+                                                                             
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                            <tr>
+                                                <td class="stack-wrapper" align="center" style="padding: 0; " width="30%" valign="middle">
+                                                    <table bgcolor="#96031A" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                        <tr>
+                                                            <td class="stack-wrapper" align="center" height="5" style="padding: 0; height:5px; font-size:1px">
+                                                                <!--[if gte mso 16]>
+                                                                    <v:image xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="border: 0; display: inline-block; height: 5px; width: 180px;" src="https://i.ibb.co/7Jyp3kx/bg2.jpg" />
+                                                                    <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="border: 0; display: inline-block; height: 5px; position: absolute; width: 180px;">
+                                                                    <v:fill opacity="0%" color="#000000" />
+                                                                    <v:textbox inset="0,0,0,0">
+                                                                <![endif]-->   
+                                                                &nbsp;
+                                                                <!--[if true]>
+                                                                    </v:textbox>
+                                                                    </v:fill>
+                                                                    </v:rect>
+                                                                    </v:image>
+                                                                <![endif]-->
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td bgcolor="#96031A" class="stack-wrapper" align="center" style="padding: 0;" width="40%">
+                                                    <!--[if gte mso 16]>
+                                                        <v:image xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="border: 0; display: inline-block; height: 40px; width: 240px;" src="https://i.ibb.co/7Jyp3kx/bg2.jpg" />
+                                                        <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="border: 0; display: inline-block; height: 40px; position: absolute; width: 240px;">
+                                                        <v:fill opacity="0%" color="#ffffff" />
+                                                        <v:textbox inset="0,0,0,0">
+                                                    <![endif]-->   
+                                                    <div>
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                            <tr>
+                                                                <td  align="center" style="font-size: 20px; color: #ffffff; font-weight: bold; text-align: center; height: 40px;" valign="middle" height="40">
+                                                                    <p style="margin: 5px 10px; " class="keepWhite">New Arrivals</p>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <!--[if true]>
+                                                        </v:textbox>
+                                                        </v:fill>
+                                                        </v:rect>
+                                                        </v:image>
+                                                    <![endif]-->
+                                                </td>
+                                                <td class="stack-wrapper" align="center" style="padding: 0; " width="30%" valign="middle">
+                                                    <table bgcolor="#96031A" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                        <tr>
+                                                            <td class="stack-wrapper" align="center" height="5" style="padding: 0; height:5px; font-size:1px">
+                                                                <!--[if gte mso 16]>
+                                                                    <v:image xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="border: 0; display: inline-block; height: 5px; width: 180px;" src="https://i.ibb.co/7Jyp3kx/bg2.jpg" />
+                                                                    <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="border: 0; display: inline-block; height: 5px; position: absolute; width: 180px;">
+                                                                    <v:fill opacity="0%" color="#000000" />
+                                                                    <v:textbox inset="0,0,0,0">
+                                                                <![endif]-->   
+                                                                &nbsp;
+                                                                <!--[if true]>
+                                                                    </v:textbox>
+                                                                    </v:fill>
+                                                                    </v:rect>
+                                                                    </v:image>
+                                                                <![endif]-->
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <table class="twoColumn" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                <tr>
+                                    <td class="stack-wrapper" align="center" style="padding: 0; ">
+                                        <!--[if true]>
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                <tr><td align="center" valign="top" style="width: 300px;">
+                                        <![endif]-->
+                                        <div class="column">
+                                        <!-- add style attribute if you are using it on 4 or more columns <div class="column" style="max-width: 300px; width: 100%;"> -->
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="padding:0">
+                                                <tr>
+                                                    <td align="center" style="padding: 0; ">
+                                                        <!--[if false]><!-->
+                                                            <div class="mshow" style="mso-hide: all;">
+                                                                <img alt="Mobile Image" border="0" src="https://i.ibb.co/wBbbXGN/mobile.png" style="mso-hide:all; max-width: 100%; height: auto; " width="100%">
+                                                            </div>
+                                                        <!--<![endif]-->
+                                                        <img class="dshow" src="https://i.ibb.co/pPYVLhc/desktop.png" alt="Desktop Image" width="300" style="border: 0; display: none; height: auto; margin: 0px; max-width: 300px; width: 100%; ">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if true]>
+                                                </td>
+                                                <td align="center" valign="top" style="width: 300px;;">
+                                        <![endif]-->
+                                        <div class="column">
+                                        <!-- add style attribute if you are using it on 4 or more columns <div class="column" style="max-width: 300px; width: 100%;"> -->
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="padding:0">
+                                                <tr>
+                                                    <td align="center" style="padding: 0; ">
+
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                            <tr>
+                                                                <th class="desktopStck" id="desktopStckLeft" align="center" style="padding: 10px 5px 10px 0; width: 50%; " width="50%">
+                                                                    <img src="https://i.ibb.co/Tv7Fmfv/600x400.png" alt="Image Alt" width="295" style="border: 0; display: block; height: auto; margin: 0px; max-width: 295px; width: 100%; ">
+                                                                </th>
+
+                                                            <!--[if true]>
+                                                            </tr>
+                                                            <tr>
+                                                            <![endif]-->    
+                                                        
+                                                                <th class="desktopStck" align="center" style="padding: 10px 0 10px 5px; width: 50%; " width="50%">
+                                                                    <img src="https://i.ibb.co/Tv7Fmfv/600x400.png" alt="Image Alt" width="295" style="border: 0; display: block; height: auto; margin: 0px; max-width: 295px; width: 100%; ">
+                                                                </th>
+                                                            </tr>
+                                                        </table>
+
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if true]>
+                                                </td></tr>
+                                            </table>
+                                        <![endif]-->
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Block 3 -->
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                <tr>
+                                    <td align="center" style="padding: 30px 0 20px 0; ">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                            <tr>
+                                                <td class="stack-wrapper" align="center" style="padding: 0; " width="30%" valign="middle">
+                                                    <table bgcolor="#e3570d" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                        <tr>
+                                                            <td class="stack-wrapper" align="center" height="5" style="padding: 0; height:5px; font-size:1px">
+                                                                &nbsp;
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td bgcolor="#e3570d" class="keepWhite" align="center" style="padding: 0; font-size: 20px; color: #ffffff; font-weight: bold; height: 40px;" height="40" width="40%">
+                                                    <p style="margin: 5px 10px; " class="keepWhite">Sale Today</p>
+                                                </td>
+
+                                                <td class="stack-wrapper" align="center" style="padding: 0; " width="30%" valign="middle">
+                                                    <table bgcolor="#e3570d" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                        <tr>
+                                                            <td class="stack-wrapper" align="center" height="5" style="padding: 0; height:5px; font-size:1px">
+                                                                &nbsp;
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <table class="twoColumn" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                <tr>
+                                    <td class="stack-wrapper" align="center" style="padding: 0; ">
+                                        <!--[if true]>
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                <tr><td align="center" valign="top" style="width: 300px;">
+                                        <![endif]-->
+                                        <div class="column">
+                                        <!-- add style attribute if you are using it on 4 or more columns <div class="column" style="max-width: 300px; width: 100%;"> -->
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="padding:0">
+                                                <tr>
+                                                    <td align="center" style="padding: 0; ">
+                                                    <img src="https://i.ibb.co/LhFL1Dw/400x400.png" alt="Image Alt" width="300" style="border: 0; display: block; height: auto; margin: 0px; max-width: 100%; width: 100%; ">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if true]>
+                                                </td>
+                                                <td align="center" valign="top" style="width: 300px;;">
+                                        <![endif]-->
+                                        <div class="column">
+                                        <!-- add style attribute if you are using it on 4 or more columns <div class="column" style="max-width: 300px; width: 100%;"> -->
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="padding:0">
+                                                <tr>
+                                                    <td align="center" style="padding: 0; height: 300px" height="300" valign="middle">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                            <tr>
+                                                                <td class="stack-wrapper" align="center" style="padding: 0 0 10px; font-size: 16px; font-weight: bold;">
+                                                                    <p style="margin: 0; color:#96031A">PRODUCT NAME</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="stack-wrapper" align="center" style="padding: 0 20px 15px; font-size: 12px; font-weight: normal; line-height: 16px;">
+                                                                    <p style="margin: 0; color:#1B1B1E">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat risus vitae bibendum tempor. Aliquam fermentum,</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="padding: 0; ">
+                                                                        <!--[if mso]>
+                                                                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.google.com" style="height: 50px; v-text-anchor: middle; width:120px; text-decoration: none;" arcsize="30px" stroke="f" fillcolor="#e3570d">
+                                                                            <w:anchorlock/>
+                                                                            <center>
+                                                                        <![endif]-->
+                                                                        
+                                                                        <!--[if false]-->
+                                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                                            <tr><td align="center" style="background-color: #e3570d; border-radius: 30px;">
+                                                                    <!--[endif]-->
+                                                                    
+                                                                            <a target="_blank" class="keepWhite" href="https://www.google.com" style="background-color:rgba(227, 87, 13, 1); border-radius: 30px; width: 120px; color:#ffffff; line-height: 50px; display: inline-block; font-size: 14px; font-weight: bold; text-align: center; text-decoration: none; -webkit-text-size-adjust: none;">SHOP NOW</a>
+                                                                    
+                                                                    <!--[if false]-->
+                                                                            </td></tr>
+                                                                        </table>
+                                                                    <!--[endif]-->
+                                                                    
+                                                                    <!--[if mso]>
+                                                                        </center>
+                                                                        </v:roundrect>
+                                                                    <![endif]-->                                        
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                            
+                                        </div>
+                                        <!--[if true]>
+                                                </td></tr>
+                                            </table>
+                                        <![endif]-->
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <table class="twoColumn" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" dir="rtl">
+                                <tr>
+                                    <td class="stack-wrapper" align="center" style="padding: 0; ">
+                                        <!--[if true]>
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                <tr><td align="center" valign="top" style="width: 300px;">
+                                        <![endif]-->
+                                        <div class="column">
+                                        <!-- add style attribute if you are using it on 4 or more columns <div class="column" style="max-width: 300px; width: 100%;"> -->
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="padding:0">
+                                                <tr>
+                                                    <td align="center" style="padding: 0; ">
+                                                    <img src="https://i.ibb.co/LhFL1Dw/400x400.png" alt="Image Alt" width="300" style="border: 0; display: block; height: auto; margin: 0px; max-width: 100%; width: 100%; ">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if true]>
+                                                </td>
+                                                <td align="center" valign="top" style="width: 300px;;">
+                                        <![endif]-->
+                                        <div class="column">
+                                        <!-- add style attribute if you are using it on 4 or more columns <div class="column" style="max-width: 300px; width: 100%;"> -->
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="padding:0">
+                                                <tr>
+                                                    <td align="center" style="padding: 0; height: 300px" height="300" valign="middle">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                            <tr>
+                                                                <td class="stack-wrapper" align="center" style="padding: 0 0 10px; font-size: 16px; font-weight: bold;">
+                                                                    <p style="margin: 0; color:#96031A">PRODUCT NAME</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="stack-wrapper" align="center" style="padding: 0 20px 15px; font-size: 12px; font-weight: normal; line-height: 16px;">
+                                                                    <p style="margin: 0; color:#1B1B1E">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat risus vitae bibendum tempor. Aliquam fermentum,</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="padding: 0; ">
+                                                                        <!--[if mso]>
+                                                                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.google.com" style="height: 50px; v-text-anchor: middle; width:120px; text-decoration: none;" arcsize="30px" stroke="f" fillcolor="#e3570d">
+                                                                            <w:anchorlock/>
+                                                                            <center>
+                                                                        <![endif]-->
+                                                                        
+                                                                        <!--[if false]-->
+                                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                                            <tr><td align="center" style="background-color: #e3570d; border-radius: 30px;">
+                                                                    <!--[endif]-->
+                                                                    
+                                                                            <a target="_blank" class="keepWhite" href="https://www.google.com" style="background-color:rgba(227, 87, 13, 1); border-radius: 30px; width: 120px; color:#ffffff; line-height: 50px; display: inline-block; font-size: 14px; font-weight: bold; text-align: center; text-decoration: none; -webkit-text-size-adjust: none;">SHOP NOW</a>
+                                                                    
+                                                                    <!--[if false]-->
+                                                                            </td></tr>
+                                                                        </table>
+                                                                    <!--[endif]-->
+                                                                    
+                                                                    <!--[if mso]>
+                                                                        </center>
+                                                                        </v:roundrect>
+                                                                    <![endif]-->                                        
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                            
+                                        </div>
+                                        <!--[if true]>
+                                                </td></tr>
+                                            </table>
+                                        <![endif]-->
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <table class="twoColumn" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                <tr>
+                                    <td class="stack-wrapper" align="center" style="padding: 0; ">
+                                        <!--[if true]>
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                <tr><td align="center" valign="top" style="width: 300px;">
+                                        <![endif]-->
+                                        <div class="column">
+                                        <!-- add style attribute if you are using it on 4 or more columns <div class="column" style="max-width: 300px; width: 100%;"> -->
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="padding:0">
+                                                <tr>
+                                                    <td align="center" style="padding: 0; ">
+                                                    <img src="https://i.ibb.co/LhFL1Dw/400x400.png" alt="Image Alt" width="300" style="border: 0; display: block; height: auto; margin: 0px; max-width: 100%; width: 100%; ">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if true]>
+                                                </td>
+                                                <td align="center" valign="top" style="width: 300px;;">
+                                        <![endif]-->
+                                        <div class="column">
+                                        <!-- add style attribute if you are using it on 4 or more columns <div class="column" style="max-width: 300px; width: 100%;"> -->
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="padding:0">
+                                                <tr>
+                                                    <td align="center" style="padding: 0; height: 300px" height="300" valign="middle">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                            <tr>
+                                                                <td class="stack-wrapper" align="center" style="padding: 0 0 10px; font-size: 16px; font-weight: bold;">
+                                                                    <p style="margin: 0; color:#96031A">PRODUCT NAME</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="stack-wrapper" align="center" style="padding: 0 20px 15px; font-size: 12px; font-weight: normal; line-height: 16px;">
+                                                                    <p style="margin: 0; color:#1B1B1E">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat risus vitae bibendum tempor. Aliquam fermentum,</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="padding: 0; ">
+                                                                        <!--[if mso]>
+                                                                            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.google.com" style="height: 50px; v-text-anchor: middle; width:120px; text-decoration: none;" arcsize="30px" stroke="f" fillcolor="#e3570d">
+                                                                            <w:anchorlock/>
+                                                                            <center>
+                                                                        <![endif]-->
+                                                                        
+                                                                        <!--[if false]-->
+                                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                                            <tr><td align="center" style="background-color: #e3570d; border-radius: 30px;">
+                                                                    <!--[endif]-->
+                                                                    
+                                                                            <a target="_blank" class="keepWhite"  href="https://www.google.com" style="background-color:rgba(227, 87, 13, 1); border-radius: 30px; width: 120px; color:#ffffff; line-height: 50px; display: inline-block; font-size: 14px; font-weight: bold; text-align: center; text-decoration: none; -webkit-text-size-adjust: none;">SHOP NOW</a>
+                                                                    
+                                                                    <!--[if false]-->
+                                                                            </td></tr>
+                                                                        </table>
+                                                                    <!--[endif]-->
+                                                                    
+                                                                    <!--[if mso]>
+                                                                        </center>
+                                                                        </v:roundrect>
+                                                                    <![endif]-->                                        
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                            
+                                        </div>
+                                        <!--[if true]>
+                                                </td></tr>
+                                            </table>
+                                        <![endif]-->
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Block 4 -->
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                <tr>
+                                    <td align="center" style="padding: 30px 0 20px 0; ">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                            <tr>
+                                                <td class="stack-wrapper" align="center" style="padding: 0; " width="30%" valign="middle">
+                                                    <table bgcolor="#000000" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                        <tr>
+                                                            <td class="stack-wrapper" align="center" height="5" style="padding: 0; height:5px; font-size:1px">
+                                                                &nbsp;
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td bgcolor="#000000" align="center" style="padding: 0; font-size: 20px; color: #ffffff; font-weight: bold; height: 40px;" height="40" width="40%">
+                                                    <p style="margin: 5px 10px; ">Top Pick</p>
+                                                </td>
+
+                                                <td class="stack-wrapper" align="center" style="padding: 0; " width="30%" valign="middle">
+                                                    <table bgcolor="#000000" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                        <tr>
+                                                            <td class="stack-wrapper" align="center" height="5" style="padding: 0; height:5px; font-size:1px">
+                                                                &nbsp;
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+                             <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                <tr>
+                                    <td class="stack-wrapper" align="center" style="padding: 0; ">
+                                        
+                                        <table class="threeColumn" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                            <tr>
+                                                <td class="stack-wrapper" align="center" style="padding: 0; ">
+                                                    <!--[if true]>
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                            <tr><td align="center" valign="top" style="width: 200px;">
+                                                    <![endif]-->
+                                                    <div class="column">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="padding:0">
+                                                            <tr>
+                                                                <td align="center" style="padding: 0; ">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                                        <tr>
+                                                                            <th class="undropImg" align="center" style="padding: 0; width: 30%; " width="30%">
+                                                                                <img src="https://i.ibb.co/XFdzLMb/400x800.png" alt="Image Alt" width="190" style="border: 0; display: block; height: auto; margin: 0px; max-width: 200px; width: 100%; ">
+                                                                            </th>
+                                                                        <!--[if true]>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th style="height: 10px; font-size: 1px" height="10">
+                                                                            </th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                        <![endif]-->
+                                                                            <th class="undropDesc" align="center" style="padding: 0 10px; width: 70%; text-align: center;" width="70%" valign="middle">
+                                                                                <p style="margin: 0 0 10px; font-size:16px; color: #96031A; font-weight: bold;">Product Name</p>
+                                                                                <p style="margin: 0; font-size: 14px; color: #000000; margin: 0 0 10px 0; font-weight: normal;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis metus id eros eleifend bibendum.</p>
+                                                                                <p style="margin: 0;"><a href="" target="_blank" alias="" style="text-decoration: underline; color: #e3570d; font-size: 14px; font-weight: bold;">View Product</a></p>
+                                                                            </th>
+                                                                        </tr>
+                                                                        <!--[if true]>
+                                                                        <tr>
+                                                                            <th style="height: 10px; font-size: 1px" height="10">
+                                                                            </th>
+                                                                        </tr>
+                                                                        <![endif]-->
+                                                                        
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td height="10" style="height: 10px; font-size: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <!--[if true]>
+                                                            </td>
+                                                            <td align="center" valign="top" style="width: 200px;">
+                                                    <![endif]-->
+                                                    <div class="column">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="padding:0">
+                                                            <tr>
+                                                                <td align="center" style="padding: 0; ">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                                        <tr>
+                                                                            <th class="undropImg" align="center" style="padding: 0; width: 30%; " width="30%">
+                                                                                <img src="https://i.ibb.co/XFdzLMb/400x800.png" alt="Image Alt" width="190" style="border: 0; display: block; height: auto; margin: 0px; max-width: 200px; width: 100%; ">
+                                                                            </th>
+                                                                        <!--[if true]>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th style="height: 10px; font-size: 1px" height="10">
+                                                                            </th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                        <![endif]-->                                                                            
+                                                                            <th class="undropDesc" align="center" style="padding: 0 10px; width: 70%; text-align: center;" width="70%" valign="middle">
+                                                                                <p style="margin: 0 0 10px; font-size:16px; color: #96031A; font-weight: bold;">Product Name</p>
+                                                                                <p style="margin: 0; font-size: 14px; color: #000000; margin: 0 0 10px 0; font-weight: normal;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis metus id eros eleifend bibendum.</p>
+                                                                                <p style="margin: 0;"><a href="" target="_blank" alias="" style="text-decoration: underline; color: #e3570d; font-size: 14px; font-weight: bold;">View Product</a></p>
+                                                                            </th>
+                                                                        </tr>
+                                                                        <!--[if true]>
+                                                                        <tr>
+                                                                            <th style="height: 10px; font-size: 1px" height="10">
+                                                                            </th>
+                                                                        </tr>
+                                                                        <![endif]-->
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td height="10" style="height: 10px; font-size: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <!--[if true]>
+                                                            </td>
+                                                            <td align="center" valign="top" style="width: 200px;">
+                                                    <![endif]-->
+                                                    <div class="column">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="padding:0">
+                                                            <tr>
+                                                                <td align="center" style="padding: 0; ">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                                        <tr>
+                                                                            <th class="undropImg" align="center" style="padding: 0; width: 30%; " width="30%">
+                                                                                <img src="https://i.ibb.co/XFdzLMb/400x800.png" alt="Image Alt" width="190" style="border: 0; display: block; height: auto; margin: 0px; max-width: 200px; width: 100%; ">
+                                                                            </th>
+                                                                        <!--[if true]>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th style="height: 10px; font-size: 1px" height="10">
+                                                                            </th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                        <![endif]-->                                                                    
+                                                                            <th class="undropDesc" align="center" style="padding: 0 10px; width: 70%; text-align: center;" width="70%" valign="middle">
+                                                                                <p style="margin: 0 0 10px; font-size:16px; color: #96031A; font-weight: bold;">Product Name</p>
+                                                                                <p style="margin: 0; font-size: 14px; color: #000000; margin: 0 0 10px 0; font-weight: normal;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis metus id eros eleifend bibendum.</p>
+                                                                                <p style="margin: 0;"><a href="" target="_blank" alias="" style="text-decoration: underline; color: #e3570d; font-size: 14px; font-weight: bold;">View Product</a></p>
+                                                                            </th>
+                                                                        </tr>
+                                                                        <!--[if true]>
+                                                                        <tr>
+                                                                            <th style="height: 10px; font-size: 1px" height="10">
+                                                                            </th>
+                                                                        </tr>
+                                                                        <![endif]-->
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td height="10" style="height: 10px; font-size: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <!--[if true]>
+                                                            </td></tr>
+                                                        </table>
+                                                    <![endif]-->
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                             </table>
+
+                            <!-- Block 5 -->
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                <tr>
+                                    <td class="stack-wrapper" align="center" style="padding: 0 0 10px 0; ">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" bgcolor="#e3570d">
+                                            <tr>
+                                                <td class="keepWhite" align="left" style="padding: 20px 15px; color: #ffffff; font-size: 12px; line-height: 20px; text-align: left;">
+                                                    <span style="font-size: 14px; font-weight: bold;">Terms and Conditions:</span>
+                                                    <p style="margin: 10px 0; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat risus vitae bibendum tempor. Aliquam fermentum, quam vel maximus lacinia, neque enim bibendum ante, vitae luctus mauris lorem eget tellus.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>                             
+                            
+                            <!-- Nav Footer -->
+                            <!--[if false]-->
+                            <div class="mshow">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" bgcolor="#96031A">
+                                    <tr>
+                                        <td class="stack-wrapper" align="center" style="padding: 10px;">
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                <tr>
+                                                    <td class="" align="center" style="padding: 10px 0 15px; font-size: 14px; color: #ffffff; font-weight: bold;">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation"  bgcolor="#ffffff" >
+                                                            <tr>
+                                                                <td align="center" style="padding: 0 0 2px 0; text-align: center;" class="bg">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                                        <tr>
+                                                                            <td align="center" style="padding: 0; " bgcolor="#96031A">
+                                                                                <a href="" target="_blank" alias="" style="text-decoration: none; font-size: 14px; color: #ffffff; font-weight: bold;">HOMEPAGE</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" style="padding: 0 0 15px; font-size: 14px; color: #ffffff; font-weight: bold;">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation"  bgcolor="#ffffff" >
+                                                            <tr>
+                                                                <td align="center" style="padding: 0 0 2px 0; text-align: center;" class="bg">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                                        <tr>
+                                                                            <td align="center" style="padding: 0; " bgcolor="#96031A">
+                                                                                <a href="" target="_blank" alias="" style="text-decoration: none; font-size: 14px; color: #ffffff; font-weight: bold;">PRODUCTS</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" style="padding: 0 0 15px; font-size: 14px; color: #ffffff; font-weight: bold;">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation"  bgcolor="#ffffff" >
+                                                            <tr>
+                                                                <td align="center" style="padding: 0 0 2px 0; text-align: center;" class="bg">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                                        <tr>
+                                                                            <td align="center" style="padding: 0; " bgcolor="#96031A">
+                                                                                <a href="" target="_blank" alias="" style="text-decoration: none; font-size: 14px; color: #ffffff; font-weight: bold;">STORES</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" style="padding: 0 0 15px; font-size: 14px; color: #ffffff; font-weight: bold;">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation"  bgcolor="#ffffff" >
+                                                            <tr>
+                                                                <td align="center" style="padding: 0 0 2px 0; text-align: center;" class="bg">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                                        <tr>
+                                                                            <td align="center" style="padding: 0; " bgcolor="#96031A">
+                                                                                <a href="" target="_blank" alias="" style="text-decoration: none; font-size: 14px; color: #ffffff; font-weight: bold;">CAREERS</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" style="padding: 0 0 15px 0; font-size: 14px; color: #ffffff; font-weight: bold;">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation"  bgcolor="#ffffff" >
+                                                            <tr>
+                                                                <td align="center" style="padding: 0 0 2px 0; text-align: center;" class="bg">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                                        <tr>
+                                                                            <td align="center" style="padding: 0; " bgcolor="#96031A">
+                                                                                <a href="" target="_blank" alias="" style="text-decoration: none; font-size: 14px; color: #ffffff; font-weight: bold;">CONTACTS US</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--[endif]-->
+
+                            <!-- Footer -->
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                <tr>
+                                    <td  align="center" style="padding: 0; " valign="middle">
+                                        <!-- Check all the necessary properties and edit them accordingly, start from Outlook code -->
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" bgcolor="#6D676E">
+                                            <tr>
+                                                <td align="center" background="https://i.ibb.co/m4dMjnP/600x260.jpg" height="248" valign="middle" style="background: url('https://i.ibb.co/m4dMjnP/600x260.jpg') top left / cover no-repeat; background-size: cover; height: 248px; width: 600px;">
+                                        
+                                                <!--[if gte mso 16]>
+                                                    <v:image xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="border: 0; display: inline-block; height: 248px; width: 600px;" src="https://i.ibb.co/m4dMjnP/600x260.jpg" />
+                                                    <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="border: 0; display: inline-block; height: 248px; position: absolute; width: 600px;">
+                                                    <v:fill opacity="0%" color="#6D676E" />
+                                                    <v:textbox inset="0,0,0,0">
+                                                <![endif]-->
+                                        
+                                                    <div>
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                            <tr>
+                                                                <td align="center" height="248" style="padding: 0;  text-align: center; color: #ffffff;  height: 248px;">
+
+                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" >
+                                                                        <tr>
+                                                                            <td align="center" style="padding: 0; height: 15px; font-size: 1px; " height="15">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="stack-wrapper" align="center" style="padding: 0; font-size:14px; ">
+                                                                                <p style="margin: 0 0 15px 0; color: #ffffff" class="keepWhite"><strong>Our Social Media</strong></p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="center" style="padding: 0; ">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                                                    <tr>
+                                                                                        <td align="center" style="padding: 0 5px 0; ">
+                                                                                            <a href="https://www.google.com" target="_blank" alias="" style="text-decoration: none;  ">
+                                                                                                <img src="https://i.ibb.co/SQWFq49/1298743-github-git-logo-social-icon.png" alt="Github" width="40" style="border: 0; display: block; height: auto; margin: 0px; max-width: 40px; width: 100%; ">
+                                                                                            </a>
+                                                                                        </td>
+                                                                                        <td align="center" style="padding: 0 5px 0; ">
+                                                                                            <a href="https://www.google.com" target="_blank" alias="" style="text-decoration: none;  ">
+                                                                                                <img src="https://i.ibb.co/pXk1Bs6/3225190-app-linkedin-logo-media-popular-icon.png" alt="Linked In" width="40" style="border: 0; display: block; height: auto; margin: 0px; max-width: 40px; width: 100%; ">
+                                                                                            </a>
+                                                                                        </td>
+                                                                                        <td align="center" style="padding: 0 5px 0; ">
+                                                                                            <a href="https://www.google.com" target="_blank" alias="" style="text-decoration: none;  ">
+                                                                                                <img src="https://i.ibb.co/g3KBKF6/3225192-app-googleplus-logo-media-popular-icon.png" alt="Google" width="40" style="border: 0; display: block; height: auto; margin: 0px; max-width: 40px; width: 100%; ">
+                                                                                            </a>
+                                                                                        </td>
+                                                                                        <td align="center" style="padding: 0 5px 0; ">
+                                                                                            <a href="https://www.google.com" target="_blank" alias="" style="text-decoration: none;  ">
+                                                                                                <img src="https://i.ibb.co/TYGTJ4J/3225194-app-facebook-logo-media-popular-icon.png" alt="Facebook" width="40" style="border: 0; display: block; height: auto; margin: 0px; max-width: 40px; width: 100%; ">
+                                                                                            </a>
+                                                                                        </td>
+                                                                                        <td align="center" style="padding: 0 5px 0; ">
+                                                                                            <a href="https://www.google.com" target="_blank" alias="" style="text-decoration: none;  ">
+                                                                                                <img src="https://i.ibb.co/MNkBwbq/294709-circle-twitter-icon.png" alt="Twitter" width="40" style="border: 0; display: block; height: auto; margin: 0px; max-width: 40px; width: 100%; ">
+                                                                                            </a>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="center" style="padding: 0; height: 15px; font-size: 1px " height="15">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="center" style="padding: 0; font-size: 10px; color: #ffffff">
+                                                                                <p style="margin: 0 0 5px 0; color: #ffffff; font-size: 12px" class="keepWhite"><strong>Questions?</strong></p>
+                                                                                <p style="margin: 0 0 15px 0; " class="keepWhite">
+                                                                                    <a class="keepWhite" href="https://www.google.com" target="_blank" alias="" style="text-decoration: none;  color: #ffffff">Chat with us</a> |  <a class="keepWhite" href="https://www.google.com" target="_blank" alias="" style="text-decoration: none;  color: #ffffff">Chat with us</a>
+                                                                                </p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="center" style="padding: 0 20px 0; font-size: 10px; line-height: 14px;">
+                                                                                <p style="margin: 0 0 15px 0; color: #ffffff" class="keepWhite">
+                                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat risus vitae bibendum tempor. Aliquam fermentum, quam vel maximus lacinia, neque enim bibendum ante, vitae luctus mauris lorem eget tellus. 
+                                                                                </p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="center" style="padding: 0; font-size: 10px; color: #ffffff ">
+                                                                                <p style="margin: 0; " class="keepWhite">
+                                                                                    <a  class="keepWhite" href="https://www.google.com" target="_blank" alias="" style="text-decoration: none;  color: #ffffff">Privacy Policy</a> | <a  class="keepWhite" href="https://www.google.com" target="_blank" alias="" style="text-decoration: none;  color: #ffffff">Unsubscribe</a> | <a  class="keepWhite" href="https://www.google.com" target="_blank" alias="" style="text-decoration: none;  color: #ffffff">View email online</a>
+                                                                                </p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="center" style="padding: 0; height: 15px; font-size: 1px " height="15">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                        
+                                                <!--[if true]>
+                                                    </v:textbox>
+                                                    </v:fill>
+                                                    </v:rect>
+                                                    </v:image>
+                                                <![endif]-->
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
+
+
